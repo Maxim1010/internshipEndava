@@ -1,0 +1,33 @@
+Prerequisite:
+An article can have an author (Optional)
+An article may contain one or more images (Optional)
+An image has a link amnd may have a description (Optional)
+An author has a surname and a forename
+An article must have one or more tags
+An article has a publication date
+An article has one or more categories
+
+Lambdas
+Comparator
+* Sort the articles by number of words (ASC and DESC)
+	* number of words from all paragraphs 
+* Sort the articles by author name (ASC and DESC)
+	* exclude articles without author
+	
+Predicate
+(1) Show all articles that contain an image
+(2) Show all articles that have an anonymous author
+* Show all articles that have at least a missing image description
+	Aggregations:
+	* Show articles that have at least an image or an author
+		* reuse (1) && (2)
+	* Has more than three tags and has a high priority
+Function
+ * For all articles extract the title of the article
+Aggregations:
+ * For all articles extract the author name and make it upper case
+
+Consumer
+* Define a consumer that prints only the title and the author
+   * If the author is missing use a placeholder (use the power of Optionals)
+* Now print all the information about an article
